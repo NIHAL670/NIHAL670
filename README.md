@@ -45,7 +45,7 @@ I bring graduate-level depth in machine learning (IIT Delhi), production softwar
 
 **Code review of model output** — Review Python, JavaScript, C++, C and SQL for correctness, edge cases, complexity and style, backed by strong DSA fundamentals.
 
-**Task authoring & difficulty calibration** — Design multi-file problems with precise specifications, reference solutions and sealed verifiers; tune difficulty using candidate-model pass rates so tasks separate strong models from weak ones.
+**Task authoring & difficulty calibration** — Design multi-file problems with precise specifications, reference solutions and sealed verifiers; tune difficulty using candidate-model pass rates so tasks separate strong models from weak ones. See a public example in [llm-code-eval-harness](https://github.com/NIHAL670/llm-code-eval-harness).
 
 **Failure analysis** — Trace failing runs to root cause, distinguishing real model mistakes from ambiguous or contradictory specs, and fix the source of false-negative grades.
 
@@ -75,21 +75,25 @@ I bring graduate-level depth in machine learning (IIT Delhi), production softwar
 
 ### Selected work
 
+**[LLM Code Eval Harness](https://github.com/NIHAL670/llm-code-eval-harness)** — *public sample of my evaluation approach*
+A deterministic rubric grader for model-written code: precise task specs with explicit spec decisions, reference solutions, sandboxed per-check execution, seeded randomized checks against the reference, and critical-vs-weighted scoring with auto-generated pass/fail justifications. Ships a calibration suite showing the rubric separating correct answers from common model failure modes, and tests for the grader itself.
+`Python` `LLM evaluation` `rubrics` `pytest` `GitHub Actions`
+
 **[IronWall AI — Speech Deepfake Detection](https://github.com/NIHAL670/DEEP-FAKE-DETECTION-MODEL)** · [Preprint](https://doi.org/10.5281/zenodo.23755056)
-Fine-tuned wav2vec2-large-xlsr-53 (300M parameters) to classify real vs. AI-generated speech. Reached 75.1% validation accuracy, diagnosed underfitting, and documented the gap to published baselines instead of tuning the reported metric. Added a reference-free quality gate that abstains on unusable audio, served through FastAPI with a React dashboard (accuracy, F1, AUC, EER vs. SNR).
+Fine-tuned wav2vec2-large-xlsr-53 (300M parameters) to classify real vs. AI-generated speech. Reached 75.1% validation accuracy, diagnosed underfitting, and documented the gap to published baselines instead of tuning the reported metric. Chunked, explainable verdicts served through a batching FastAPI inference server, with a React dashboard reporting accuracy, F1, AUC and EER across SNR levels.
 `wav2vec2` `TensorFlow/Keras` `Hugging Face` `FastAPI` `React`
 
 **[Smart Agriculture AI System](https://github.com/NIHAL670/AI-powered-crop-prediction-and-disease-detection-model)**
-Three-module platform: a 7-class crop recommender at 89% test accuracy with calibrated top-3 output, fertiliser optimisation, and a CNN leaf-disease detector across 6 crops at 92% validation accuracy on 4,000 images.
-`Python` `scikit-learn` `CNN` `Docker` `Hugging Face Spaces`
+Crop recommender over 22 crops from 7 soil and weather features (89% test accuracy, calibrated top-3 output), fertiliser and irrigation planning, and per-crop CNN leaf-disease detectors across 6 crops (92% validation accuracy on 4,000 images).
+`Python` `scikit-learn` `CNN` `FastAPI` `Streamlit`
 
-**[Nova Cart — Full-Stack E-Commerce](https://github.com/NIHAL670/Nova-ecart-)**
-26 routes, JWT authentication with role-based access, secure Stripe payment webhooks, and 32 passing tests in CI.
-`Next.js 15` `Node.js/Express` `MongoDB` `Redis` `Stripe`
+**[Nova Cart — Full-Stack E-Commerce](https://github.com/NIHAL670/Nova-ecart-)** · [Live demo](https://nova-ecart.vercel.app)
+26 routes, JWT authentication with role-based access, secure Stripe and Razorpay payment webhooks, and 32 passing tests in CI.
+`Next.js 15` `Node.js/Express` `TypeScript` `MongoDB` `Redis` `Stripe`
 
 **[Crypto Price Forecasting](https://github.com/NIHAL670/cryptop_prediction_model)**
-Time-series features engineered from 4,000 rows of OHLCV data with sliding windows and MinMax scaling; four model families benchmarked under one protocol and deployed on Streamlit.
-`Python` `TensorFlow` `XGBoost` `Streamlit`
+Per-coin stacked-LSTM forecasters for BTC, ETH, BNB, XRP and DOGE on 60-day sliding windows of Yahoo Finance OHLCV data, served in a Streamlit app with bcrypt-hashed accounts.
+`Python` `TensorFlow` `LSTM` `Streamlit`
 
 ---
 
