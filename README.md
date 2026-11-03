@@ -79,19 +79,19 @@ I bring graduate-level depth in machine learning (IIT Delhi), production softwar
 A deterministic rubric grader for model-written code: precise task specs with explicit spec decisions, reference solutions, sandboxed per-check execution, seeded randomized checks against the reference, and critical-vs-weighted scoring with auto-generated pass/fail justifications. Ships a calibration suite showing the rubric separating correct answers from common model failure modes, and tests for the grader itself.
 `Python` `LLM evaluation` `rubrics` `pytest` `GitHub Actions`
 
-**[IronWall AI — Speech Deepfake Detection](https://github.com/NIHAL670/DEEP-FAKE-DETECTION-MODEL)** · [Preprint](https://doi.org/10.5281/zenodo.23755056)
-Fine-tuned wav2vec2-large-xlsr-53 (300M parameters) to classify real vs. AI-generated speech. Reached 75.1% validation accuracy, diagnosed underfitting, and documented the gap to published baselines instead of tuning the reported metric. Chunked, explainable verdicts served through a batching FastAPI inference server, with a React dashboard reporting accuracy, F1, AUC and EER across SNR levels.
+**[IronWall AI — Speech Deepfake Detection](https://github.com/NIHAL670/ironwall-ai)** · [Preprint](https://doi.org/10.5281/zenodo.23755056)
+*Team project (Team X-01); I authored the accompanying preprint.* Fine-tuned wav2vec2-large-xlsr-53 (300M parameters) to classify real vs. AI-generated speech. Reached 75.1% validation accuracy, diagnosed underfitting, and documented the gap to published baselines instead of tuning the reported metric. Chunked, explainable verdicts served through a batching FastAPI inference server, with a React dashboard reporting accuracy, F1, AUC and EER across SNR levels.
 `wav2vec2` `TensorFlow/Keras` `Hugging Face` `FastAPI` `React`
 
-**[Smart Agriculture AI System](https://github.com/NIHAL670/AI-powered-crop-prediction-and-disease-detection-model)**
+**[Smart Agriculture AI System](https://github.com/NIHAL670/smart-agriculture-ai)**
 Crop recommender over 22 crops from 7 soil and weather features (89% test accuracy, calibrated top-3 output), fertiliser and irrigation planning, and per-crop CNN leaf-disease detectors across 6 crops (92% validation accuracy on 4,000 images).
 `Python` `scikit-learn` `CNN` `FastAPI` `Streamlit`
 
-**[Nova Cart — Full-Stack E-Commerce](https://github.com/NIHAL670/Nova-ecart-)** · [Live demo](https://nova-ecart.vercel.app)
+**[Nova Cart — Full-Stack E-Commerce](https://github.com/NIHAL670/nova-cart)** · [Live demo](https://nova-ecart.vercel.app)
 26 routes, JWT authentication with role-based access, secure Stripe and Razorpay payment webhooks, and 32 passing tests in CI.
 `Next.js 15` `Node.js/Express` `TypeScript` `MongoDB` `Redis` `Stripe`
 
-**[Crypto Price Forecasting](https://github.com/NIHAL670/cryptop_prediction_model)**
+**[Crypto Price Forecasting](https://github.com/NIHAL670/crypto-price-forecasting)**
 Per-coin stacked-LSTM forecasters for BTC, ETH, BNB, XRP and DOGE on 60-day sliding windows of Yahoo Finance OHLCV data, served in a Streamlit app with bcrypt-hashed accounts.
 `Python` `TensorFlow` `LSTM` `Streamlit`
 
