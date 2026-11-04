@@ -34,6 +34,7 @@ I bring graduate-level depth in machine learning (IIT Delhi), production softwar
 | 🎓 **Education** | M.Tech in AI & ML, IIT Delhi (CGPA 8.0/10) · B.Tech in AI & ML |
 | 🧪 **Model evaluation** | Two frontier-model evaluation contracts — Handshake AI (2025 – present) and AfterQuery (2026) |
 | ✅ **Grading rigour** | Deterministic harnesses with automated rubrics of **100+ checks** per larger task; every task cleared quality gates |
+| 🔍 **Reward auditing** | Found and documented reward hacking in my own agent-evaluation environment (stalling out-scores solving) |
 | 💻 **Coding strength** | LeetCode contest rating **1850** (390+ solved) · Codeforces **1400** (160+ solved) |
 | 📄 **Research** | Preprint on real-time audio deepfake detection (Zenodo, 2026) |
 
@@ -78,6 +79,10 @@ I bring graduate-level depth in machine learning (IIT Delhi), production softwar
 **[LLM Code Eval Harness](https://github.com/NIHAL670/llm-code-eval-harness)** — *public sample of my evaluation approach*
 A deterministic rubric grader for model-written code: precise task specs with explicit spec decisions, reference solutions, sandboxed per-check execution, seeded randomized checks against the reference, and critical-vs-weighted scoring with auto-generated pass/fail justifications. Ships a calibration suite showing the rubric separating correct answers from common model failure modes, and tests for the grader itself.
 `Python` `LLM evaluation` `rubrics` `pytest` `GitHub Actions`
+
+**[Agentic News Verifier — Agent Evaluation Environment](https://github.com/NIHAL670/agentic-news-verifier)** · *Meta PyTorch OpenEnv Hackathon*
+An OpenEnv environment that evaluates LLM fact-checking agents: a search-then-verify action space, shaped rewards, per-task graders, and a baseline Qwen2.5-72B run. A follow-up audit found reward hacking: padding episodes with repeated searches out-scores the efficient path (1.19 vs 0.95), and an agent that never answers still earns 0.47. The audit documents both, with proposed reward fixes.
+`Python` `FastAPI` `OpenEnv` `reward design` `Docker`
 
 **[IronWall AI — Speech Deepfake Detection](https://github.com/NIHAL670/ironwall-ai)** · [Preprint](https://doi.org/10.5281/zenodo.23755056)
 *Team project (Team X-01); I authored the accompanying preprint.* Fine-tuned wav2vec2-large-xlsr-53 (300M parameters) to classify real vs. AI-generated speech. Reached 75.1% validation accuracy, diagnosed underfitting, and documented the gap to published baselines instead of tuning the reported metric. Chunked, explainable verdicts served through a batching FastAPI inference server, with a React dashboard reporting accuracy, F1, AUC and EER across SNR levels.
